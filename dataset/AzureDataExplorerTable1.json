@@ -1,0 +1,19 @@
+{
+	"name": "AzureDataExplorerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataExplorer1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "adx"
+		},
+		"annotations": [],
+		"type": "AzureDataExplorerTable",
+		"schema": [],
+		"typeProperties": {
+			"table": "shubham_table"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

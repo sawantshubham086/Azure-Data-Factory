@@ -1,0 +1,12 @@
+{
+	"name": "AzureDataExplorer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataExplorer",
+		"typeProperties": {
+			"endpoint": "https://kvctassdkhu06jde45g48g.australiaeast.kusto.windows.net",
+			"database": "shubham_database"
+		}
+	}
+}
