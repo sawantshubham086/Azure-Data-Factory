@@ -1321,6 +1321,26 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/SQL script 1')]",
+			"type": "Microsoft.Synapse/workspaces/sqlscripts",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"content": {
+					"query": "CREATE TABLE [dbo].[shubham]\n(\n    col1 int NOT NULL\n)\nWITH\n(\n    DISTRIBUTION = HASH (col1),\n    CLUSTERED COLUMNSTORE INDEX\n)\nGO\n\ninsert into shubham values (1) \ninsert into shubham values (2) \n\nSELECT * from shubham\n\n",
+					"metadata": {
+						"language": "sql"
+					},
+					"currentConnection": {
+						"databaseName": "shubham_sql_pool",
+						"poolName": "shubham_sql_pool"
+					},
+					"resultLimit": 5000
+				},
+				"type": "SqlQuery"
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/shubham_sql_pool')]",
 			"type": "Microsoft.Synapse/workspaces/sqlPools",
 			"apiVersion": "2019-06-01-preview",
