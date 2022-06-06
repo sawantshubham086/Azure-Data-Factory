@@ -2,20 +2,15 @@
 	"name": "DelimitedText2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "shubham-synapse-WorkspaceDefaultStorage",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "copy data"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": "customercsv",
-				"folderPath": "metadata",
-				"container": "shubhamconyainer1"
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "synapse"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -23,5 +18,5 @@
 		},
 		"schema": []
 	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	"type": "Microsoft.Synapse/workspaces/datasets"
 }
