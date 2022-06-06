@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"SqlServer1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
+		},
 		"AzureDataExplorer1_properties_typeProperties_endpoint": {
 			"type": "string",
 			"defaultValue": "https://kvctassdkhu06jde45g48g.australiaeast.kusto.windows.net"
@@ -48,6 +52,9 @@
 					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
 					},
 					"AzureDataExplorer1_properties_typeProperties_endpoint": {
 						"value": "[parameters('AzureDataExplorer1_properties_typeProperties_endpoint')]"
