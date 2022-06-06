@@ -5,8 +5,9 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=DESKTOP-NKJ48I4\\SQLEXPRESS01;initial catalog=shubham_database;user id=shubhamserver1",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjMDRiOTVjOS0xZThhLTRjNTAtOGZjNS1hNGVhZTEzZWRmZDciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "integrated security=True;data source=DESKTOP-NKJ48I4\\SQLEXPRESS01;initial catalog=shubham_database",
+			"userName": "shubhamserver1",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2OWYwZGRiMS1mODQyLTQ0YTItYjgyMS1hNmM3NjA3ODQ1YjciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime2",
