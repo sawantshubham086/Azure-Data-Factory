@@ -27,8 +27,8 @@
 				}
 			},
 			{
-				"name": "Filter1",
-				"type": "Filter",
+				"name": "Validation1",
+				"type": "Validation",
 				"dependsOn": [
 					{
 						"activity": "Data flow1",
@@ -37,7 +37,15 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DelimitedText3",
+						"type": "DatasetReference"
+					},
+					"timeout": "7.00:00:00",
+					"sleep": 10
+				}
 			}
 		],
 		"folder": {
