@@ -1,0 +1,96 @@
+{
+	"name": "Dataflow4",
+	"properties": {
+		"folder": {
+			"name": "Derived column"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText3",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText12",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Column_1 as string,",
+				"          Column_2 as string,",
+				"          Column_3 as string,",
+				"          Column_4 as string,",
+				"          Column_5 as string,",
+				"          Column_6 as string,",
+				"          Column_7 as string,",
+				"          Column_8 as string,",
+				"          Column_9 as string,",
+				"          Column_10 as string,",
+				"          Column_11 as string,",
+				"          Column_12 as string,",
+				"          Column_13 as string,",
+				"          Column_14 as string,",
+				"          Column_15 as string,",
+				"          Column_16 as string,",
+				"          Column_17 as string,",
+				"          Column_18 as string,",
+				"          Column_19 as string,",
+				"          Column_20 as string,",
+				"          Column_21 as string,",
+				"          Column_22 as string,",
+				"          Column_23 as string,",
+				"          Column_24 as string,",
+				"          Column_25 as string,",
+				"          Column_26 as string,",
+				"          Column_27 as string,",
+				"          Column_28 as string,",
+				"          Column_29 as string,",
+				"          Column_30 as string,",
+				"          Column_31 as string,",
+				"          Column_32 as string,",
+				"          Column_33 as string,",
+				"          Column_34 as string,",
+				"          Column_35 as string,",
+				"          Column_36 as string,",
+				"          Column_37 as string,",
+				"          Column_38 as string,",
+				"          Column_39 as string,",
+				"          Column_40 as string,",
+				"          Column_41 as string,",
+				"          Column_42 as string,",
+				"          Column_43 as string,",
+				"          Column_44 as string,",
+				"          Column_45 as string,",
+				"          Column_46 as string,",
+				"          Column_47 as string,",
+				"          Column_48 as string,",
+				"          Column_49 as string,",
+				"          Column_50 as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(Column_1 = equals(Column_1, '7000962719_20220526101728')) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
